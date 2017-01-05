@@ -1,0 +1,1 @@
+include ':app', ':maptest', 'AMap3DDemo'
