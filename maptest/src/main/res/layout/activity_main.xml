@@ -1,21 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.jimro.maptest.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relative_route_detail"
+        android:layout_below="@+id/group_route">
+
+        <com.amap.api.maps.TextureMapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/group_route"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eae8e8"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/route_car"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/car_selector"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="驾车" />
+
+        <RadioButton
+            android:id="@+id/route_bus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/bus_selector"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="公交" />
+
+        <RadioButton
+            android:id="@+id/route_walk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/walk_selector"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="步行" />
+
+        <RadioButton
+            android:id="@+id/route_train"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/train_selector"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="跨城公交" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/relative_route_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/route_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/route_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/route_time"
+            android:layout_marginLeft="10dp" />
+
+        <ImageView
+            android:id="@+id/xiangqing_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:onClick="onClick"
+            android:src="@drawable/ic_chevron_right_black_24dp" />
+
+        <TextView
+            android:id="@+id/xiangqing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/xiangqing_more"
+            android:onClick="onClick"
+            android:text="详情" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        />
-
-    <com.amap.api.maps.TextureMapView
-        android:id="@+id/map"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+        android:layout_below="@id/group_route" />
+</RelativeLayout>

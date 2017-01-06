@@ -1,10 +1,16 @@
 package com.jimro.maptest;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
@@ -13,15 +19,26 @@ import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.TextureMapView;
+import com.amap.api.services.route.BusRouteResult;
+import com.amap.api.services.route.DriveRouteResult;
+import com.amap.api.services.route.RideRouteResult;
+import com.amap.api.services.route.RouteSearch;
+import com.amap.api.services.route.WalkRouteResult;
 
 
-public class MainActivity extends AppCompatActivity implements LocationSource, AMapLocationListener {
+public class MainActivity extends AppCompatActivity implements LocationSource, AMapLocationListener,
+        RouteSearch.OnRouteSearchListener {
     private OnLocationChangedListener mListener;
     private AMapLocationClient mlocationClient;
     private AMapLocationClientOption mLocationOption;
     private TextureMapView mapView;
     private AMap aMap;
     private TextView textView;
+    private RouteSearch mRouteSearch;
+    private RelativeLayout relativeRouteDetail;
+    private TextView timeText;
+    private TextView detailText;
+    private RadioGroup mRouteGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements LocationSource, A
         mapView = (TextureMapView) findViewById(R.id.map);
         //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，创建地图
         mapView.onCreate(savedInstanceState);
+
         init();
 
     }
@@ -46,6 +64,13 @@ public class MainActivity extends AppCompatActivity implements LocationSource, A
 //            aMap.setMapType(AMap.MAP_TYPE_NORMAL);// 卫星地图模式
         }
         setUpMap();
+        mRouteSearch = new RouteSearch(this);
+        mRouteSearch.setRouteSearchListener(this);
+
+        relativeRouteDetail = (RelativeLayout) findViewById(R.id.relative_route_detail);
+        timeText = (TextView) findViewById(R.id.route_time);
+        detailText = (TextView) findViewById(R.id.route_detail);
+        mRouteGroup = (RadioGroup) findViewById(R.id.group_route);
 
     }
 
@@ -58,6 +83,39 @@ public class MainActivity extends AppCompatActivity implements LocationSource, A
         aMap.setMyLocationEnabled(true);// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false
         // 设置定位的类型为定位模式 ，可以由定位、跟随或地图根据面向方向旋转几种
         aMap.setMyLocationType(AMap.LOCATION_TYPE_MAP_ROTATE);
+    }
+
+
+    public void onClick(View view) {
+        RadioButton radioButton = null;
+        if (view.getId() != R.id.xiangqing && view.getId() != R.id.xiangqing_more) {
+            radioButton = (RadioButton) view;
+        }
+        switch (view.getId()) {
+            case R.id.route_car:
+                radioButton.setChecked(radioButton.isChecked());
+                break;
+            case R.id.route_bus:
+                radioButton.setChecked(radioButton.isChecked());
+                break;
+            case R.id.route_walk:
+                radioButton.setChecked(radioButton.isChecked());
+                break;
+            case R.id.route_train:
+                radioButton.setChecked(radioButton.isChecked());
+                break;
+            case R.id.xiangqing:
+            case R.id.xiangqing_more:
+                break;
+        }
+
+        for (int i = 0; i < mRouteGroup.getChildCount(); i++) {
+            if (mRouteGroup.getChildAt(i).getId() == view.getId()) {
+                ((RadioButton) mRouteGroup.getChildAt(i)).setTextColor(Color.WHITE);
+            } else {
+                ((RadioButton) mRouteGroup.getChildAt(i)).setTextColor(Color.BLACK);
+            }
+        }
     }
 
     /**
@@ -158,5 +216,25 @@ public class MainActivity extends AppCompatActivity implements LocationSource, A
                 Log.e("AmapErr", errText);
             }
         }
+    }
+
+    @Override
+    public void onBusRouteSearched(BusRouteResult busRouteResult, int i) {
+        //公交车路线
+    }
+
+    @Override
+    public void onDriveRouteSearched(DriveRouteResult driveRouteResult, int i) {
+        //驾车路线
+    }
+
+    @Override
+    public void onWalkRouteSearched(WalkRouteResult walkRouteResult, int i) {
+        //步行路线
+    }
+
+    @Override
+    public void onRideRouteSearched(RideRouteResult rideRouteResult, int i) {
+        // TODO Auto-generated method stub
     }
 }
