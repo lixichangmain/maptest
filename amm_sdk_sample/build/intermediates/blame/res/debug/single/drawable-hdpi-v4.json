@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_check_off_disable.png",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\btn_check_off_disable.png"
+    },
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mm_submenu_pressed.png",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\mm_submenu_pressed.png"
+    },
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_check_off_normal.png",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\btn_check_off_normal.png"
+    },
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_dialog_alert.png",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\ic_dialog_alert.png"
+    },
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\send_img.jpg",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\send_img.jpg"
+    },
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\send_music_thumb.png",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\send_music_thumb.png"
+    },
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_check_on_normal.png",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\btn_check_on_normal.png"
+    },
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\send_music_thumb_backup.png",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\send_music_thumb_backup.png"
+    },
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mm_submenu_normal.png",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\mm_submenu_normal.png"
+    },
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\mm_trans.png",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\mm_trans.png"
+    },
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\btn_check_on_disable.png",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\btn_check_on_disable.png"
+    },
+    {
+        "merged": "G:\\MyApplication\\amm_sdk_sample\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_dialog_long_click.png",
+        "source": "G:\\MyApplication\\amm_sdk_sample\\src\\main\\res\\drawable-hdpi\\ic_dialog_long_click.png"
+    }
+]

@@ -1,1 +1,3 @@
-include ':app', ':maptest', 'AMap3DDemo'
+include ':app', ':maptest',  ':surfaceviewlearning', 'AMap3DDemo'
+
+include ':amm_sdk_sample'

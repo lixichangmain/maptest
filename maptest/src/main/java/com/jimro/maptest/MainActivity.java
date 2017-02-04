@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements LocationSource, A
             aMap = mapView.getMap();
             aMap.setTrafficEnabled(true);// 显示实时交通状况
             //地图模式可选类型：MAP_TYPE_NORMAL,MAP_TYPE_SATELLITE,MAP_TYPE_NIGHT
-            aMap.setMapType(AMap.MAP_TYPE_NORMAL);// 卫星地图模式
+            aMap.setMapType(AMap.MAP_TYPE_NORMAL);
         }
         setUpMap();
         registerListener();
