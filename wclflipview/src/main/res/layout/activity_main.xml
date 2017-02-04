@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jimro.wclflipview.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/container_wclflipview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <com.jimro.wclflipview.view.WclFlipView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </com.jimro.wclflipview.view.WclFlipView>
+
+        <com.jimro.wclflipview.view.WclFlipView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </com.jimro.wclflipview.view.WclFlipView>
+
+        <com.jimro.wclflipview.view.WclFlipView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </com.jimro.wclflipview.view.WclFlipView>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container_wclflipview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="onClick"
+        android:text="重置"
+        android:textSize="20sp" />
+
+</RelativeLayout>
