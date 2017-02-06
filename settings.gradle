@@ -1,3 +1,3 @@
-include ':app', ':maptest', ':surfaceviewlearning', ':audiobackgroundview', 'AMap3DDemo', ':wclflipview', 'CustomView-master'
+include ':app', ':maptest', ':surfaceviewlearning', ':audiobackgroundview', 'AMap3DDemo', ':wclflipview'
 
 include ':amm_sdk_sample'
