@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AudioBackgroundView">
+        <!--渐变色顶部颜色-->
+        <attr name="topColor" format="color" />
+        <!--渐变色底部的颜色-->
+        <attr name="bottomColor" format="color" />
+        <!--小矩形的数目-->
+        <attr name="rectCount" format="integer" />
+        <!--每个小矩形之间的偏移量-->
+        <attr name="rectOffset" format="dimension" />
+        <!--vie重绘的时间-->
+        <attr name="delayTime" format="integer" />
+    </declare-styleable>
+
+</resources>
